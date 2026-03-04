@@ -1,0 +1,92 @@
+Relaciones con Llaves Foraneas (FK)
+
+film:
+(PK) film_id
+(FK) lenguage_id: Un film tiene muchos lenguajes.
+(FK) original_lenguage_id: Un film tiene un lenguaje original.
+
+address:
+(PK) address_id
+(FK) city_id: Una ciudad tiene muchas direccion.
+
+city:
+(PK) city_id
+(FK) country_id: un país tiene muchas ciudades.
+
+staff_list:
+Nada
+
+customer_list:
+Nada
+
+actor_info:
+(PK) actor_id
+
+sales_by_film_category:
+Nada
+
+country:
+(PK) country_id
+
+film_category:
+(FK) film_id: Un film tiene muchas categorias.
+(FK) category_id: Una categoria tiene muchos filmes.
+
+sales_by_store:
+Nada
+
+actor:
+(PK) actor_id
+
+film_actor:
+(FK) actor_id: Un actor tiene muchas peliculas.
+(FK) film_id: Una pelicula tiene muchos actores.
+
+film_list:
+Nada
+
+payment:
+(PK) payment_id
+(FK) customer_id: Un cliente tiene muchos pagos.
+(FK) staff_id: Un staff tiene muchos pagos.
+(FK) rental_id: Un alquiler tiene muchos pagos.
+
+store:
+(PK) store_id
+(FK) manager_staff_id: Una tienda tiene un manager.
+(FK) address_id: Una tienda tiene una direccion.
+
+rental:
+(PK) rental_id
+(FK) inventory_id: Un alquiler tiene un inventario.
+(FK) customer_id: Un cliente tiene un alquiler.
+(FK) staff_id: Un staff tiene un alquiler.
+
+lenguage:
+(PK) lenguage_id
+
+inventory:
+(PK) inventory_id
+(FK) film_id: Un inventario tiene muchos filmes.
+(FK) store_id: Una tienda tiene un inventario.
+
+nicer_but_slower_film_list:
+Nada
+
+Customer:
+(PK) customer_id
+(FK) store_id: Una tienda tiene muchos clientes.
+(FK) address_id: Un cliente tiene una direccion.
+
+film_text:
+Nada
+
+staff:
+(PK) staff_id
+(FK) address_id: Un staff tiene muchas direcciones.
+(FK) store_id: Una tienda tiene un staff.
+
+category:
+(PK) category_id
+
+
